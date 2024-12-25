@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream Announcement</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: #fff;
+            background-color: #333;
+        }
+        .announcement {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="announcement" id="announcement-box">
+        <h1>Time for a fun announcement!</h1>
+        <p>This message will pop up on a regular basis during your stream!</p>
+    </div>
+
+    <script>
+        setInterval(function() {
+            var announcementBox = document.getElementById("announcement-box");
+            announcementBox.style.display = "block";
+            setTimeout(function() {
+                announcementBox.style.display = "none";
+            }, 5000); // 5 seconds
+        }, 60000); // Every 60 seconds
+    </script>
+</body>
+</html>
